@@ -1,0 +1,30 @@
+{
+  "opensearch": {
+    "addresses": [
+      "http://localhost:9200"
+    ],
+    "username": "",
+    "password": "",
+    "tls_verify": false,
+    "timeout_seconds": 30,
+    "max_retries": 3
+  },
+  "agent": {
+    "poll_interval_seconds": 30,
+    "hot_node_threshold": 0.70,
+    "jvm_weight": 0.40,
+    "disk_weight": 0.40,
+    "shard_weight": 0.20
+  },
+  "rebalancer": {
+    "dry_run": true,
+    "max_moves_per_cycle": 5,
+    "skew_reduction_target": 0.25,
+    "large_shard_threshold_bytes": 2147483648
+  },
+  "circuit_breaker": {
+    "required_health": "green",
+    "max_avg_latency_ms": 40.0,
+    "max_relocating_shards": 0
+  }
+}
